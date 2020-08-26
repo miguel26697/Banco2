@@ -15,6 +15,16 @@ public class Tarjeta {
                 '}';
     }
 
+    public Tarjeta(long noTarjetaC, int claveAvances, String fechaCaducidad, Double couta, Double cupo, Double tasaInteres, Double coutaManejo) {
+        NoTarjetaC = noTarjetaC;
+        ClaveAvances = claveAvances;
+        FechaCaducidad = fechaCaducidad;
+        Couta = couta;
+        Cupo = cupo;
+        TasaInteres = tasaInteres;
+        CoutaManejo = coutaManejo;
+    }
+
     String FechaCaducidad;
     Double Couta;
     Double Cupo;
