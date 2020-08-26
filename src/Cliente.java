@@ -64,9 +64,7 @@ public class Cliente {
                 ", Direccion='" + Direccion + '\'' +
                 '}';
     }
-    public void validarEdad(){
-        
-    }
+
 
 
 
