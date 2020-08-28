@@ -1,74 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Cliente {
 
-    String Nombre;
-    String Apellidos;
-    int Cedula;
-    String Direccion;
-    int Edad;
+
+    ArrayList <Integer> cedula = new ArrayList <Integer> ();
+    ArrayList <String> nombre = new ArrayList <String> ();
+    ArrayList <String>  apellidos =  new ArrayList <String> ();
 
 
-    public String getNombre() {
-        return Nombre;
+    public void RegistrarCliente(int cont){
+        Scanner sc = new Scanner (System.in);
+        System.out.println(" Digite los datos del cliente ");
+        System.out.println(" Digite la cedula");
+         cedula.add(sc.nextInt());
+        System.out.println(" Digite el nombre");
+        nombre.add(sc.next());
+        System.out.println(" Digite los apellidos");
+        apellidos.add(sc.next());
     }
-
-    public void setNombre(String nombre) {
-        Nombre = nombre;
-    }
-
-    public String getApellidos() {
-        return Apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        Apellidos = apellidos;
-    }
-
-    public int getCedula() {
-        return Cedula;
-    }
-
-    public void setCedula(int cedula) {
-        Cedula = cedula;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        Direccion = direccion;
-    }
-
-    public int getEdad() {
-        return Edad;
-    }
-
-    public void setEdad(int edad) {
-        Edad = edad;
-    }
-
-    public Cliente(String nombre, String apellidos, int cedula, String direccion) {
-        Nombre = nombre;
-        Apellidos = apellidos;
-        Cedula = cedula;
-        Direccion = direccion;
+    public void MostrarClientes() {
+        for(int i = 0; i< nombre.size();i++){
+            System.out.println("cedula"+cedula.get(i));
+            System.out.println("nombre"+nombre.get(i));
+            System.out.println("apellidos"+apellidos.get(i));
+        }
 
     }
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "Nombre='" + Nombre + '\'' +
-                ", Apellidos='" + Apellidos + '\'' +
-                ", Cedula=" + Cedula +
-                ", Direccion='" + Direccion + '\'' +
-                '}';
-    }
-
-
-
-
-
-
 
 }
